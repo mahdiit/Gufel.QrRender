@@ -121,6 +121,9 @@
   <data name="GraphicData" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GraphicData.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="PublicKey" xml:space="preserve">
+    <value>{"Curve": "nistP256","D": null,"X": "XMC7ASdEUu500C4hfhMNLpDQ3eI-h_MLsBGQckWAYZk","Y": "rN7JwUVZ894eaT9q4QPEFI510SzIz9PCLzPjZ1b9aqw"}</value>
+  </data>
   <data name="Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Template.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>

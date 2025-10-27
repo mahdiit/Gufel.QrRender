@@ -4,6 +4,7 @@ using Gufel.QrRender.Providers;
 using Gufel.QrRender.Providers.Export.Inkscape;
 using Gufel.QrRender.Providers.Export.Magick;
 using Gufel.QrRender.Providers.Export.Skia;
+using Gufel.QrRender.Providers.License;
 using Gufel.QrRender.Providers.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using QRCoder;
@@ -15,6 +16,7 @@ namespace Gufel.QrRender.SampleConsoleApp
         static async Task Main(string[] args)
         {
             Console.WriteLine("Start");
+            LicenseManager.SetLicense(LicenseType.OpenSource);
 
             var services = new ServiceCollection();
             services.AddSingleton<IQrLogoStorage>(_ => new QrLogoStorage("Asset/Icons/"));

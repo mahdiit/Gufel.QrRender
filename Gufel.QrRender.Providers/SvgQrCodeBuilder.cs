@@ -4,6 +4,7 @@ using QRCoder;
 using System.Drawing;
 using System.Globalization;
 using System.Text;
+using Gufel.QrRender.Providers.License;
 
 namespace Gufel.QrRender.Providers;
 
@@ -40,6 +41,8 @@ public sealed class SvgQrCode(IResourceStorage storage)
     public (string SvgContent, int BoxSize) GetGraphic(QrRenderOption option)
     {
         ArgumentNullException.ThrowIfNull(QrCodeData);
+
+        LicenseManager.Validate();
 
         var boxCount = QrCodeData.ModuleMatrix.Count - 8;
         var pixelsPerModule = option.BoxSize / (double)boxCount;

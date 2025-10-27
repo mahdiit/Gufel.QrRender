@@ -85,6 +85,15 @@ namespace Gufel.QrRender.Providers.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {&quot;Curve&quot;: &quot;nistP256&quot;,&quot;D&quot;: null,&quot;X&quot;: &quot;XMC7ASdEUu500C4hfhMNLpDQ3eI-h_MLsBGQckWAYZk&quot;,&quot;Y&quot;: &quot;rN7JwUVZ894eaT9q4QPEFI510SzIz9PCLzPjZ1b9aqw&quot;}.
+        /// </summary>
+        internal static string PublicKey {
+            get {
+                return ResourceManager.GetString("PublicKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to [
         ///  {
         ///    &quot;Code&quot;: &quot;1&quot;,
@@ -96,19 +105,18 @@ namespace Gufel.QrRender.Providers.Properties {
         ///    &quot;Frame&quot;: &quot;0&quot;,
         ///    &quot;Ball&quot;: &quot;0&quot;,
         ///    &quot;Body&quot;: &quot;0&quot;,
-        ///    &quot;Logo&quot;: &quot;&quot;,
-        ///    &quot;Name&quot;: &quot;کلاسيک&quot;,
-        ///    &quot;EnName&quot;: &quot;Classic&quot;,
+        ///    &quot;Logo&quot;: &quot;&quot;,    
+        ///    &quot;Name&quot;: &quot;Classic&quot;,
         ///    &quot;BodyColorGradient&quot;: &quot;&quot;,
-        ///    &quot;GradientOnEyes&quot;: &quot;&quot;,
-        ///    &quot;GradientType&quot;: &quot;&quot;
+        ///    &quot;GradientOnEyes&quot;: null,
+        ///    &quot;GradientType&quot;: null
         ///  },
         ///  {
         ///    &quot;Code&quot;: &quot;2&quot;,
         ///    &quot;BodyColor&quot;: &quot;#113151&quot;,
         ///    &quot;FrameColor&quot;: &quot;#113151&quot;,
         ///    &quot;BallColor&quot;: &quot;#113151&quot;,
-        ///    &quot;Background [rest of string was truncated]&quot;;.
+        ///    &quot;BackgroundColor&quot;: &quot;#FFFFFF&quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Template {
             get {

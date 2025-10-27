@@ -1,7 +1,8 @@
 
-using System.Text.Json.Serialization;
 using Gufel.QrRender.Models.Storage;
+using Gufel.QrRender.Providers.License;
 using Gufel.QrRender.Providers.Storage;
+using System.Text.Json.Serialization;
 
 namespace Gufel.QrRender.SampleWebApi
 {
@@ -10,6 +11,8 @@ namespace Gufel.QrRender.SampleWebApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            LicenseManager.SetLicense(LicenseType.OpenSource);
 
             // Add services to the container.
 
