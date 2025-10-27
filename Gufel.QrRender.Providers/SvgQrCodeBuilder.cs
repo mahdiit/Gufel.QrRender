@@ -87,26 +87,27 @@ public sealed class SvgQrCode(IResourceStorage storage)
             svgFile.AppendLine(string.Format(GradientMaskPixel, boxSize, boxSize));
         }
 
-        CreateLogo(option, boxCount, pixelsPerModule, svgFile);
+        CreateLogo(option, boxCount, boxSize, pixelsPerModule, svgFile);
 
         svgFile.AppendLine("</g></svg>");
 
         return (svgFile.ToString(), boxSize);
     }
 
-    private static void CreateLogo(QrRenderOption option, int boxCount, double pixelsPerModule, StringBuilder svgFile)
+    private static void CreateLogo(QrRenderOption option, int boxCount, int boxSize, double pixelsPerModule, StringBuilder svgFile)
     {
         if (option.Logo == null) return;
 
-        var logoWidth = ((double)boxCount / 3) * pixelsPerModule;
+        var logoWidth = ((double)boxCount / 4) * pixelsPerModule;
+        var pos = (boxSize - logoWidth) / 2;
         if (option.Logo.IsSvg)
         {
             var scaleSize = logoWidth / option.Logo.LogoSize.Width;
-            svgFile.AppendLine(string.Format(GraphicPosScale, logoWidth, logoWidth, SvgVal(scaleSize), option.Logo.Data));
+            svgFile.AppendLine(string.Format(GraphicPosScale, pos, pos, SvgVal(scaleSize), option.Logo.Data));
         }
         else
         {
-            svgFile.AppendLine(string.Format(LogoHolder, logoWidth, logoWidth, option.Logo.Data));
+            svgFile.AppendLine(string.Format(LogoHolder, pos, pos, option.Logo.Data));
         }
     }
 
