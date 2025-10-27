@@ -20,4 +20,8 @@
     <ProjectReference Include="..\Gufel.QrRender.Providers\Gufel.QrRender.Providers.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\_temp\" />
+  </ItemGroup>
+
 </Project>
