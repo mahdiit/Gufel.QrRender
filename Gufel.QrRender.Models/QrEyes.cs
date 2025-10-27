@@ -4,13 +4,13 @@ namespace Gufel.QrRender.Models;
 
 public class QrEyes
 {
-    public QrEye UpperLeft { get; set; } = new QrEye();
+    public QrEye UpperLeft { get; set; } = new();
 
-    public QrEye UpperRight { get; set; } = new QrEye();
+    public QrEye UpperRight { get; set; } = new();
 
-    public QrEye LowerLeft { get; set; } = new QrEye();
+    public QrEye LowerLeft { get; set; } = new();
 
-    public bool HasGradient { get; set; } = false;
+    public bool HasGradient { get; set; }
 
     public void SetFrameColor(Color color)
     {
