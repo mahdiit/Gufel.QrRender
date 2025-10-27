@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Gufel.QrRender.Models/Gufel.QrRender.Models.csproj" />
+  <Project Path="Gufel.QrRender.Providers/Gufel.QrRender.Providers.csproj" />
+  <Project Path="Gufel.QrRender.SampleConsoleApp/Gufel.QrRender.SampleConsoleApp.csproj" />
+  <Project Path="Gufel.QrRender.SampleWebApi/Gufel.QrRender.SampleWebApi.csproj" Id="6e3b8920-8515-4eb4-954c-3f53f6fb2a68" />
+</Solution>

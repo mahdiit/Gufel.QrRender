@@ -1,0 +1,5 @@
+﻿@Gufel.QrRender.SampleWebApi_HostAddress = http://localhost:5133
+
+GET {{Gufel.QrRender.SampleWebApi_HostAddress}}/qrcode
+
+###
