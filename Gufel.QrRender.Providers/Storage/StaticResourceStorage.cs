@@ -6,7 +6,7 @@ using Gufel.QrRender.Models.Storage.Model;
 namespace Gufel.QrRender.Providers.Storage;
 
 public class StaticResourceStorage
-    (ILogoStorage logoStorage)
+    (ILogoLoader logoStorage)
     : IResourceStorage
 {
     private static readonly JsonSerializerOptions Options = new JsonSerializerOptions

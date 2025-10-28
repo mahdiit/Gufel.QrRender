@@ -3,17 +3,16 @@ using Gufel.QrRender.Models.Storage;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats;
 using System.Globalization;
+using System.Text;
 using System.Xml;
 
 namespace Gufel.QrRender.Providers.Storage;
 
-public class StaticLogoStorage(IQrLogoStorage logoStorage) : ILogoStorage
+public sealed class LogoLoader(ILogoRepository logoRepository) : ILogoLoader
 {
-    private static QrLogo ImageLoad(string folder, string name)
+    private static QrLogo ImageLoad(byte[] imageData)
     {
-        var filePath = folder + name;
-
-        using var image = Image.Load(filePath);
+        using var image = Image.Load(imageData);
         var mimeType = GetMimeTypeFromImageSharpFormat(image.Metadata.DecodedImageFormat);
         if (string.IsNullOrEmpty(mimeType))
             throw new Exception("Logo image MimeType is not found, please support valid image file");
@@ -50,10 +49,8 @@ public class StaticLogoStorage(IQrLogoStorage logoStorage) : ILogoStorage
         };
     }
 
-    private static QrLogo SvgLoad(string folder, string name)
+    private static QrLogo SvgLoad(string svgContent)
     {
-        var svgContent = File.ReadAllText(folder + name);
-
         var cl = new CultureInfo("en-US");
         var doc = new XmlDocument();
         doc.LoadXml(svgContent);
@@ -94,10 +91,10 @@ public class StaticLogoStorage(IQrLogoStorage logoStorage) : ILogoStorage
 
     public QrLogo? Load(string name)
     {
-        var folder = logoStorage.Path;
+        var data = logoRepository.Load(name);
 
-        return name.EndsWith(".svg")
-             ? SvgLoad(folder, name)
-             : ImageLoad(folder, name);
+        return data.IsSvg
+             ? SvgLoad(Encoding.UTF8.GetString(data.Content))
+             : ImageLoad(data.Content);
     }
 }

@@ -19,8 +19,8 @@ namespace Gufel.QrRender.SampleConsoleApp
             LicenseManager.SetLicense(LicenseType.OpenSource);
 
             var services = new ServiceCollection();
-            services.AddSingleton<IQrLogoStorage>(_ => new QrLogoStorage("Asset/Icons/"));
-            services.AddSingleton<ILogoStorage, StaticLogoStorage>();
+            services.AddSingleton<ILogoRepository>(_ => new PhysicalLogoRepository("Asset/Icons/"));
+            services.AddSingleton<ILogoLoader, LogoLoader>();
             services.AddSingleton<IResourceStorage, StaticResourceStorage>();
 
             var app = services.BuildServiceProvider();

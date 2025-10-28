@@ -1,6 +1,6 @@
 ﻿namespace Gufel.QrRender.Models.Storage;
 
-public interface ILogoStorage
+public interface ILogoLoader
 {
     QrLogo? Load(string name);
 }

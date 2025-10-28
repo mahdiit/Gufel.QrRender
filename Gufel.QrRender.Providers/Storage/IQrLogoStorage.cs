@@ -1,11 +1,14 @@
 ﻿namespace Gufel.QrRender.Providers.Storage;
 
-public interface IQrLogoStorage
+public interface ILogoRepository
 {
-    string Path { get; }
+    (byte[] Content, bool IsSvg) Load(string name);
 }
 
-public record QrLogoStorage(string Path) : IQrLogoStorage
+public record PhysicalLogoRepository(string Path) : ILogoRepository
 {
-
+    public (byte[] Content, bool IsSvg) Load(string name)
+    {
+        return (File.ReadAllBytes(System.IO.Path.Combine(Path, name)), name.EndsWith(".svg"));
+    }
 }
