@@ -8,7 +8,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 
 		<PackageId>Gufel.QrRender</PackageId>
-		<Title>Gufel qrcode svg render extention</Title>
+		<Title>Gufel Advanced QrCode Svg Render</Title>
 		<Authors>mahdiit</Authors>
 		<Version>1.0.0</Version>
 		<Description>This project provides a flexible and extensible for building and exporting vectorized qrcode (svg, pdf) and png that support template and customization</Description>
