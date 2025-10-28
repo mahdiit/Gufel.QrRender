@@ -42,6 +42,7 @@ public static class LicenseManager
     {
         if (licenseType == LicenseType.OpenSource)
         {
+            Console.WriteLine("This application using open-source license of Gufel QrRender, use commercial license for private use");
             _isValid = true;
             return;
         }

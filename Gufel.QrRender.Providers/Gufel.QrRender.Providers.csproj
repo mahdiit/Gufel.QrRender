@@ -1,39 +1,69 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 
-  <ItemGroup>
-    <PackageReference Include="CliWrap" Version="3.9.0" />
-    <PackageReference Include="Gufel.EcdKey" Version="1.1.2" />
-    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.9.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.10" />
-    <PackageReference Include="QRCoder" Version="1.7.0" />
-    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.11" />
-    <PackageReference Include="SkiaSharp" Version="3.119.1" />
-    <PackageReference Include="Svg.Skia" Version="3.2.1" />
-  </ItemGroup>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Gufel.QrRender.Models\Gufel.QrRender.Models.csproj" />
-  </ItemGroup>
+		<PackageId>Gufel.QrRender</PackageId>
+		<Title>Gufel qrcode svg render extention</Title>
+		<Authors>mahdiit</Authors>
+		<Version>1.0.0</Version>
+		<Description>This project provides a flexible and extensible for building and exporting vectorized qrcode (svg, pdf) and png that support template and customization</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/mahdiit/Gufel.QrRender</RepositoryUrl>
+		<PackageTags>qrcoder,qr-code,svg,vector,barcode,qrcode</PackageTags>
+		<PackageIcon>qrcode.jpg</PackageIcon>
+		<PackageLicenseFile>License.md</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/mahdiit/Gufel.QrRender</PackageProjectUrl>
+		<PackageReleaseNotes Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">Init public version</PackageReleaseNotes>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="qrcode.jpg">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="License.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="CliWrap" Version="3.9.0" />
+		<PackageReference Include="Gufel.EcdKey" Version="1.1.2" />
+		<PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.9.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.10" />
+		<PackageReference Include="QRCoder" Version="1.7.0" />
+		<PackageReference Include="SixLabors.ImageSharp" Version="3.1.11" />
+		<PackageReference Include="SkiaSharp" Version="3.119.1" />
+		<PackageReference Include="Svg.Skia" Version="3.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Gufel.QrRender.Models\Gufel.QrRender.Models.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
 
 </Project>
