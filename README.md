@@ -22,6 +22,10 @@ you can build high quality svg qrcode with 20 predefined template.
 | Vectorized | Rasterized |
 
 ## ☕ Buy Me a Coffee (Crypto)
+I spent many hours and produced a lot of code
+
+testing and testing and testing
+refactoring and refactoring
 
 If you'd like to support this project, you can send crypto to:
 
@@ -31,6 +35,10 @@ If you'd like to support this project, you can send crypto to:
 
 
 ## Sample:
+web api sample project found under folder: `Gufel.QrRender.SampleWebApi`
+
+console project found under folder: `Gufel.QrRender.SampleConsoleApp`
+
 To start the creation of qrcode, you need qrcode data that can be generated using payload or simple text. reffer to QRCoder for more information. 
 
 ```csharp
