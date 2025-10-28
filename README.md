@@ -17,7 +17,7 @@ you can build high quality svg qrcode with 20 predefined template.
 7. ⭐ Sample and Dockerized project
 8. ⭐ Outputs work on all operating systems: Linux, Mac and Windows
 
-| <img src="/Asset/diff/Vectorized.png" width="60%" alt="13">  | <img src="/Asset/diff/Rasterisation.png" width="60%" alt="14"> |
+| ![Vectorized](/Asset/diff/Vectorized.png)  | ![Rasterisation](/Asset/diff/Rasterisation.png)
 |:---:|:--:|
 | Vectorized | Rasterized |
 
