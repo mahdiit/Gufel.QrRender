@@ -1,9 +1,9 @@
 # Graphics
-there are tree type of graphics as static resource manager, 
-this resource can extended or use a custome resource manager. below is data from static resource manager
+there are tree types of graphics as static resource manager, 
+this resource can be extended or use a custom resource manager. below is data from the static resource manager
 
-## How graphics resolved?
-there is `IResourceRepository`  that resolve based on graphic ids
+## How were graphics resolved?
+there is `IResourceRepository` that resolves based on graphic ids
 ```csharp
 public interface IResourceRepository
 {
@@ -12,7 +12,7 @@ public interface IResourceRepository
     QrRenderOption GetTemplate(int templateId);
 }
 ```
-and there is `GraphicDataItem` that qr code build with it.
+and there is `GraphicDataItem` that qrcode built with it.
 ```csharp
 public enum QrGraphicType
 {
@@ -46,7 +46,7 @@ public record GraphicDataItem
 ```
 
 ## Frame (Eye)
-frames are around on ball eyes. can set from 0-14, automatically rotated based on side of eye
+frames are around the ball eyes. can set from 0-14, automatically rotated based on side of eye
 
 | ![frame0.png](/Asset/graphics/frame0.png) | ![frame1.png](/Asset/graphics/frame1.png) | ![frame2.png](/Asset/graphics/frame2.png) | ![frame3.png](/Asset/graphics/frame3.png) | ![frame4.png](/Asset/graphics/frame4.png) |
 |:---:|:---:|:---:|:---:|:---:|
@@ -57,7 +57,7 @@ frames are around on ball eyes. can set from 0-14, automatically rotated based o
 | 10 | 11 | 12 | 13 | 14 |
 
 ## Ball (Eye)
-ball eye can set from 0-17, automatically rotated based on side of eye
+ball eye can be set from 0-17, automatically rotated based on the side of the eye
 
 | ![ball0.png](/Asset/graphics/ball0.png) | ![ball1.png](/Asset/graphics/ball1.png) | ![ball2.png](/Asset/graphics/ball2.png) | ![ball3.png](/Asset/graphics/ball3.png) | ![ball4.png](/Asset/graphics/ball4.png) |
 |:---:|:---:|:---:|:---:|:---:|
@@ -93,12 +93,12 @@ body pixel can set from 0-21
 | ![body20.png](/Asset/graphics/body20.png) | ![body21.png](/Asset/graphics/body21.png) |  |  |  |
 | 20 | 21 |  |  |  |
 
-there are algorithem for loading body pixel, each body pixel has 4 graphic. that indicate position of pixel based on neighbors.
+there are algorithms for loading body pixels, each body pixel has 4 graphics. that indicate the position of a pixel based on neighbors.
 example of ids:
 * `5-0001`
 * `5-0011`
 * `5-0111`
 * `5-1111`
 
-it Anticlockwise around current pixel and allow different style of pixel based on neighbor pixel. it allow that end or start pixel make diffrent style.
-for pixel that never changes you can set them same. for example in body 21 all are same.
+it anticlockwise around the current pixel and allows different styles of pixels based on neighboring pixels. it allows that end or start pixel to make a different style.
+for pixel that never change, you can set them the same. for example in body 21 all are the same.

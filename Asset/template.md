@@ -1,6 +1,6 @@
 # Templates
 static resource manager contains pre-defined templates, this template can be extended.
-templates are simple way to create qr-code they convert to `QrRenderOption` and then use by api
+templates are simple way to create qr-code they convert to `QrRenderOption` and are then used by api
 
 ```csharp
 public record TemplateDataItem
@@ -43,10 +43,10 @@ sample template
 }
 ```
 
-colors in all configs stored as html color, also there is logo property 
-this resolve by logo storage, default static logo storage read files from physical path.
+colors in all configs are stored as html colors, and there is also logo property 
+this resolve by logo storage, default static logo storage reads files from physical path.
 
-`GradientOnEyes` can be 0,1 when is 1 then gradiant apply to eyes of qrcode
+`GradientOnEyes` can be 0,1 when it is 1 then the gradient applies to eyes of qrcode
 
 | <img src="/Asset/template/13.png" width="" alt="13">  | <img src="/Asset/template/14.png" width="" alt="14"> |
 |:---:|:--:|
@@ -65,7 +65,7 @@ public enum QrColorType
 
 gradiant colors are first `BodyColor` and second `BodyColorGradient`
 
-there is `QuietZonePixel` around main barcode that make qrcode-reader read code better, this property can calculate automatically if not set.
+there is `QuietZonePixel` around the main barcode that makes the qrcode reader read the code better, this property can calculate automatically if not set.
 
 | <img src="/Asset/template/1.png" width="" alt="1">  | <img src="/Asset/template/2.png" width="" alt="2"> |<img src="/Asset/template/3.png" width="" alt="3"> |
 |:---:|:--:|:---:|

@@ -1,7 +1,7 @@
-﻿# Gufel Qr Render
-Based on [`QRCoder`](https://github.com/Shane32/QRCoder) [`nuget`](https://www.nuget.org/packages/QRCoder) package, this package export qrcode as hight quality verctor svg format with customization and template. you can also export svg as png or pdf with helper service and tools.
+﻿# Gufel Advanced QrCode Svg Render
+Based on [`QRCoder`](https://github.com/Shane32/QRCoder) [`nuget`](https://www.nuget.org/packages/QRCoder) package, this package exports qrcode as high quality verctor svg format with customization and templates. You can also export svg as png or pdf with helper services and tools.
 
-you can build hight qulaity svg qr code with 20 predefined template.
+you can build high quality svg qrcode with 20 predefined template.
 
 | <img src="/Asset/template/13.png" width="60%" alt="13">  | <img src="/Asset/template/15.png" width="60%" alt="14"> |
 |:---:|:--:|
@@ -15,19 +15,19 @@ you can build hight qulaity svg qr code with 20 predefined template.
 5. ⭐ Template definition to simplify production
 6. ⭐ PDF and PNG output helper
 7. ⭐ Sample and Dockerized project
-8. ⭐ Outputs work on all operating systems, Linux, Mac and Windows
+8. ⭐ Outputs work on all operating systems: Linux, Mac and Windows
 
 | <img src="/Asset/diff/Vectorized.png" width="60%" alt="13">  | <img src="/Asset/diff/Rasterisation.png" width="60%" alt="14"> |
 |:---:|:--:|
 | Vectorized | Rasterized |
 
 ## Sample:
-for start of createtion of qrcode, you need qrcode data that can be generate using payload or simple text. reffer to QRCoder for more information. 
+To start the creation of qrcode, you need qrcode data that can be generated using payload or simple text. reffer to QRCoder for more information. 
 
 ```csharp
 using var qrCodeData = QRCodeGenerator.GenerateQrCode("https://github.com/mahdiit", QRCodeGenerator.ECCLevel.M);
 ```
-main class must load resource and svg graphics for creating qr code, so we need to register default implementation and static content for resource:
+main class must load resources and svg graphics for creating qrcode, so we need to register default implementation and static content for resource:
 ```csharp
 services.AddSingleton<ILogoRepository, StaticLogoRepository>();
 services.AddSingleton<ILogoLoader, LogoLoader>();
@@ -40,13 +40,13 @@ next pass `qrCodeData` to main svg creator:
  using var svgRenderer = new SvgQrCode(app.GetRequiredService<IResourceRepository>());
  svgRenderer.SetQRCodeData(qrCodeData);
 ```
-to complete creation of hight quality vector qrcode you need to pass [options](/Asset/graphics.md) or template. simple way is predefined template. 
+to complete creation of high quality vector qrcode you need to pass [options](/Asset/graphics.md) or template. simple way is predefined template. 
 see [template list](/Asset/template.md)
 ```csharp
 svgRenderer.GetGraphic(templateId: 1).SvgContent
 ```
 ## Convert Helper
-there are 3 helpers for converting svg content to pdf or png and each of them has pros and cons and there is Commercial Library that can help. in this library use free/open source and fast solution.
+there are 3 helpers for converting svg content to pdf or png and each of them has pros and cons and there is a commercial library that can help. in this library use a free/open source and fast solution.
 
 | Method       | Platform           | Free | Quality    |
 | ------------ | ------------------ | ---- | ---------- |
