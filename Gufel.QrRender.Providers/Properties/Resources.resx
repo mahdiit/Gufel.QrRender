@@ -118,13 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bitcoinsvg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bitcoin.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="facebooksvg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\facebook.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="GraphicData" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GraphicData.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="instagramsvg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\instagram.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="likesvg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\like.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="linkedinsvg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linkedin.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="PublicKey" xml:space="preserve">
     <value>{"Curve": "nistP256","D": null,"X": "XMC7ASdEUu500C4hfhMNLpDQ3eI-h_MLsBGQckWAYZk","Y": "rN7JwUVZ894eaT9q4QPEFI510SzIz9PCLzPjZ1b9aqw"}</value>
   </data>
   <data name="Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Template.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="twittersvg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitter.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="youtubesvg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\youtube.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

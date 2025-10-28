@@ -8,7 +8,7 @@ using Gufel.QrRender.Providers.License;
 
 namespace Gufel.QrRender.Providers;
 
-public sealed class SvgQrCode(IResourceStorage storage)
+public sealed class SvgQrCode(IResourceRepository storage)
     : AbstractQRCode, IDisposable
 {
     private const string GraphicPosScale = @"<g transform=""translate({0},{1}) scale({2}, {2})"">{3}</g>";

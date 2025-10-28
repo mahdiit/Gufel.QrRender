@@ -5,11 +5,11 @@ using Gufel.QrRender.Models.Storage.Model;
 
 namespace Gufel.QrRender.Providers.Storage;
 
-public class StaticResourceStorage
+public class StaticResourceRepository
     (ILogoLoader logoStorage)
-    : IResourceStorage
+    : IResourceRepository
 {
-    private static readonly JsonSerializerOptions Options = new JsonSerializerOptions
+    private static readonly JsonSerializerOptions Options = new()
     {
         NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString
     };

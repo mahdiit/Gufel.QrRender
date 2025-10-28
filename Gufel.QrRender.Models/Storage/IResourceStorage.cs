@@ -2,7 +2,7 @@
 
 namespace Gufel.QrRender.Models.Storage;
 
-public interface IResourceStorage
+public interface IResourceRepository
 {
     GraphicDataItem GetGraphic(string id, QrGraphicType graphicType);
 

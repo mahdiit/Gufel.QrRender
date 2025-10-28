@@ -13,7 +13,7 @@ namespace Gufel.QrRender.SampleWebApi.Controllers
     /// </summary>
     [ApiController]
     [Route("[controller]")]
-    public class QrCodeController(IConfiguration configuration, IResourceStorage resourceStorage)
+    public class QrCodeController(IConfiguration configuration, IResourceRepository resourceStorage)
         : ControllerBase
     {
         /// <summary>

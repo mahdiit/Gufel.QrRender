@@ -19,14 +19,14 @@ namespace Gufel.QrRender.SampleConsoleApp
             LicenseManager.SetLicense(LicenseType.OpenSource);
 
             var services = new ServiceCollection();
-            services.AddSingleton<ILogoRepository>(_ => new PhysicalLogoRepository("Asset/Icons/"));
+            services.AddSingleton<ILogoRepository, StaticLogoRepository>();
             services.AddSingleton<ILogoLoader, LogoLoader>();
-            services.AddSingleton<IResourceStorage, StaticResourceStorage>();
+            services.AddSingleton<IResourceRepository, StaticResourceRepository>();
 
             var app = services.BuildServiceProvider();
 
             using var qrCodeData = QRCodeGenerator.GenerateQrCode("https://github.com/mahdiit", QRCodeGenerator.ECCLevel.M);
-            using var svgRenderer = new SvgQrCode(app.GetRequiredService<IResourceStorage>());
+            using var svgRenderer = new SvgQrCode(app.GetRequiredService<IResourceRepository>());
             svgRenderer.SetQRCodeData(qrCodeData);
 
             var dir = new DirectoryInfo("svg-output");

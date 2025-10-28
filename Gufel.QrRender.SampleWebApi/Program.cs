@@ -16,9 +16,9 @@ namespace Gufel.QrRender.SampleWebApi
 
             // Add services to the container.
 
-            builder.Services.AddSingleton<ILogoRepository>(_ => new PhysicalLogoRepository("wwwroot/asset/icons/"));
+            builder.Services.AddSingleton<ILogoRepository, StaticLogoRepository>();
             builder.Services.AddSingleton<ILogoLoader, LogoLoader>();
-            builder.Services.AddSingleton<IResourceStorage, StaticResourceStorage>();
+            builder.Services.AddSingleton<IResourceRepository, StaticResourceRepository>();
 
             builder.Services.AddControllers()
                 .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));

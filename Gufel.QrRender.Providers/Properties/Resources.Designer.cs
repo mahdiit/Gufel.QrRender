@@ -61,6 +61,26 @@ namespace Gufel.QrRender.Providers.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] bitcoinsvg {
+            get {
+                object obj = ResourceManager.GetObject("bitcoinsvg", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] facebooksvg {
+            get {
+                object obj = ResourceManager.GetObject("facebooksvg", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to [
         ///  {
         ///    &quot;Code&quot;: &quot;2&quot;,
@@ -81,6 +101,36 @@ namespace Gufel.QrRender.Providers.Properties {
         internal static string GraphicData {
             get {
                 return ResourceManager.GetString("GraphicData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] instagramsvg {
+            get {
+                object obj = ResourceManager.GetObject("instagramsvg", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] likesvg {
+            get {
+                object obj = ResourceManager.GetObject("likesvg", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] linkedinsvg {
+            get {
+                object obj = ResourceManager.GetObject("linkedinsvg", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -121,6 +171,26 @@ namespace Gufel.QrRender.Providers.Properties {
         internal static string Template {
             get {
                 return ResourceManager.GetString("Template", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] twittersvg {
+            get {
+                object obj = ResourceManager.GetObject("twittersvg", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] youtubesvg {
+            get {
+                object obj = ResourceManager.GetObject("youtubesvg", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }
