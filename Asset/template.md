@@ -48,7 +48,7 @@ this resolve by logo storage, default static logo storage read files from physic
 
 `GradientOnEyes` can be 0,1 when is 1 then gradiant apply to eyes of qrcode
 
-| <img src="/Asset/template/13.png" width="50%" alt="13">  | <img src="/Asset/template/14.png" width="50%" alt="14"> |
+| <img src="/Asset/template/13.png" width="" alt="13">  | <img src="/Asset/template/14.png" width="" alt="14"> |
 |:---:|:--:|
 | `GradientOnEyes = 0` | `GradientOnEyes = 1` |
 
@@ -67,18 +67,18 @@ gradiant colors are first `BodyColor` and second `BodyColorGradient`
 
 there is `QuietZonePixel` around main barcode that make qrcode-reader read code better, this property can calculate automatically if not set.
 
-| <img src="/Asset/template/1.png" width="50%" alt="1">  | <img src="/Asset/template/2.png" width="50%" alt="2"> |<img src="/Asset/template/3.png" width="50%" alt="3"> |
+| <img src="/Asset/template/1.png" width="" alt="1">  | <img src="/Asset/template/2.png" width="" alt="2"> |<img src="/Asset/template/3.png" width="" alt="3"> |
 |:---:|:--:|:---:|
 | 1 | 2 | 3 |
-| <img src="/Asset/template/4.png" width="50%" alt="4">  | <img src="/Asset/template/5.png" width="50%" alt="5"> |<img src="/Asset/template/6.png" width="50%" alt="6"> |
+| <img src="/Asset/template/4.png" width="" alt="4">  | <img src="/Asset/template/5.png" width="" alt="5"> |<img src="/Asset/template/6.png" width="" alt="6"> |
 | 4 | 5 | 6 |
-| <img src="/Asset/template/7.png" width="50%" alt="7">  | <img src="/Asset/template/8.png" width="50%" alt="8"> |<img src="/Asset/template/9.png" width="50%" alt="9"> |
+| <img src="/Asset/template/7.png" width="" alt="7">  | <img src="/Asset/template/8.png" width="" alt="8"> |<img src="/Asset/template/9.png" width="" alt="9"> |
 | 7 | 8 | 9 |
-| <img src="/Asset/template/10.png" width="50%" alt="10">  | <img src="/Asset/template/11.png" width="50%" alt="11"> |<img src="/Asset/template/12.png" width="50%" alt="12"> |
+| <img src="/Asset/template/10.png" width="" alt="10">  | <img src="/Asset/template/11.png" width="" alt="11"> |<img src="/Asset/template/12.png" width="" alt="12"> |
 | 10 | 11 | 12 |
-| <img src="/Asset/template/13.png" width="50%" alt="13">  | <img src="/Asset/template/14.png" width="50%" alt="14"> |<img src="/Asset/template/15.png" width="50%" alt="15"> |
+| <img src="/Asset/template/13.png" width="" alt="13">  | <img src="/Asset/template/14.png" width="" alt="14"> |<img src="/Asset/template/15.png" width="" alt="15"> |
 | 13 | 14 | 15 |
-| <img src="/Asset/template/16.png" width="50%" alt="16">  | <img src="/Asset/template/17.png" width="50%" alt="17"> |<img src="/Asset/template/18.png" width="50%" alt="18"> |
+| <img src="/Asset/template/16.png" width="" alt="16">  | <img src="/Asset/template/17.png" width="" alt="17"> |<img src="/Asset/template/18.png" width="" alt="18"> |
 | 16 | 17 | 18 |
-| <img src="/Asset/template/19.png" width="50%" alt="19">  | | |
+| <img src="/Asset/template/19.png" width="" alt="19">  | | |
 | 19 |  |  |
