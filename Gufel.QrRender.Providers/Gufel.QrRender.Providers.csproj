@@ -19,6 +19,8 @@
 		<PackageLicenseFile>License.md</PackageLicenseFile>
 		<PackageProjectUrl>https://github.com/mahdiit/Gufel.QrRender</PackageProjectUrl>
 		<PackageReleaseNotes Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">Init public version</PackageReleaseNotes>
+		<Copyright>Mehdi Yousefi</Copyright>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
 
 	<ItemGroup>
