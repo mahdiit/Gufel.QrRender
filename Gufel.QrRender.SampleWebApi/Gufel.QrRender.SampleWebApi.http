@@ -1,5 +1,54 @@
 ﻿@Gufel.QrRender.SampleWebApi_HostAddress = http://localhost:5133
 
-GET {{Gufel.QrRender.SampleWebApi_HostAddress}}/qrcode
+@templateId=15
+@payload=sample
+@level=H
+@exportType=Png 
+@serviceType=SkiaSharp
+GET {{Gufel.QrRender.SampleWebApi_HostAddress}}/qrcode?templateId={{templateId}}&payload={{payload}}&level={{level}}&exportType={{exportType}}&serviceType={{serviceType}}
+
+###
+
+POST {{Gufel.QrRender.SampleWebApi_HostAddress}}/qrcode
+Content-Type: application/json
+
+{
+  "payload": "sample",
+  "option": {
+    "body": 1,
+    "boxSize": 512,
+    "quietZone": null,
+    "eyes": {
+      "upperLeft": {
+        "frameColor": "#22C1C3",
+        "ballColor": "#FDBB2D",
+        "frame": 1,
+        "ball": 1
+      },
+      "upperRight": {
+        "frameColor": "#22C1C3",
+        "ballColor": "#FDBB2D",
+        "frame": 1,
+        "ball": 1
+      },
+      "lowerLeft": {
+        "frameColor": "#22C1C3",
+        "ballColor": "#FDBB2D",
+        "frame": 1,
+        "ball": 1
+      },
+      "hasGradient": false
+    },
+    "colors": {
+      "body": "#22C1C3",
+      "background": "#FFFFFF",
+      "gradient": null,
+      "backgroundType": "Solid"
+    }
+  },
+  "exportType": "Png",
+  "serviceType": "SkiaSharp",
+  "level": "H"
+}
 
 ###
