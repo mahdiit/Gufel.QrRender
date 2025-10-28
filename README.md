@@ -21,6 +21,15 @@ you can build high quality svg qrcode with 20 predefined template.
 |:---:|:--:|
 | Vectorized | Rasterized |
 
+## ☕ Buy Me a Coffee (Crypto)
+
+If you'd like to support this project, you can send crypto to:
+
+**Bitcoin (BTC)**  `18gMqPRoLmG9vMvFYgdREpAtYPafYC2r5B`
+
+**Dogecoin (DOGE)** `DNrtbptXEpWjniJ7zTMH14namJd38494Sv`
+
+
 ## Sample:
 To start the creation of qrcode, you need qrcode data that can be generated using payload or simple text. reffer to QRCoder for more information. 
 
@@ -105,3 +114,4 @@ MagickNetExport.SvgToPng(svgPath, svgPath + "-magick.png");
 ```
 ## License
 By using this software, you agree to the terms of either the GPLv3 license or the commercial license, depending on your use in [LICENSE](License.md).
+
