@@ -40,13 +40,13 @@ next pass `qrCodeData` to main svg creator:
  using var svgRenderer = new SvgQrCode(app.GetRequiredService<IResourceRepository>());
  svgRenderer.SetQRCodeData(qrCodeData);
 ```
-to complete creation of hight quality vector qrcode you need to pass options or template. simple way is predefined template. 
+to complete creation of hight quality vector qrcode you need to pass [options](/Asset/graphics.md) or template. simple way is predefined template. 
 see [template list](/Asset/template.md)
 ```csharp
 svgRenderer.GetGraphic(templateId: 1).SvgContent
 ```
 ## Convert Helper
-there are 3 service and helper for converting svg content to pdf or png and each of them has pros and cons and there is Commercial Library that can help. in this library use free/open source and fast solution.
+there are 3 helpers for converting svg content to pdf or png and each of them has pros and cons and there is Commercial Library that can help. in this library use free/open source and fast solution.
 
 | Method       | Platform           | Free | Quality    |
 | ------------ | ------------------ | ---- | ---------- |
@@ -103,3 +103,5 @@ SkiaSharpExport.SvgToPng(svgPath, svgPath + "-skia.png");
 MagickNetExport.SvgToPdf(svgPath, svgPath + "-magick.pdf");
 MagickNetExport.SvgToPng(svgPath, svgPath + "-magick.png");
 ```
+## License
+By using this software, you agree to the terms of either the GPLv3 license or the commercial license, depending on your use in [LICENSE](License.md).

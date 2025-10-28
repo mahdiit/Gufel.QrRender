@@ -2,6 +2,17 @@
 there are tree type of graphics as static resource manager, 
 this resource can extended or use a custome resource manager. below is data from static resource manager
 
+## How graphics resolved?
+there is `IResourceRepository`  that resolve based on graphic ids
+```csharp
+public interface IResourceRepository
+{
+    GraphicDataItem GetGraphic(string id, QrGraphicType graphicType);
+
+    QrRenderOption GetTemplate(int templateId);
+}
+```
+and there is `GraphicDataItem` that qr code build with it.
 ```csharp
 public enum QrGraphicType
 {
@@ -10,7 +21,30 @@ public enum QrGraphicType
     Body = 3
 }
 
+public record GraphicDataItem
+    {
+    //internal id, not using by code
+        public int Code { get; init; }
+    
+    //this id used by template and options
+        public string GraphicID { get; init; }
+
+    //based on QrGraphicType, frame, ball, body
+        public byte GraphicTypeCode { get; init; }
+
+    //svg content of item
+        public string GraphicData { get; init; }
+
+    //for ball and eye these property use as rotation
+        public string TopLeft { get; init; }
+        public string TopRight { get; init; }
+        public string BottomLeft { get; init; }
+
+    //size of vector
+        public int GraphicSize { get; init; }
+    }
 ```
+
 ## Frame (Eye)
 frames are around on ball eyes. can set from 0-14, automatically rotated based on side of eye
 
@@ -35,6 +69,15 @@ ball eye can set from 0-17, automatically rotated based on side of eye
 | ![ball15.png](/Asset/graphics/ball15.png) | ![ball16.png](/Asset/graphics/ball16.png) | ![ball17.png](/Asset/graphics/ball17.png) |  |  |
 | 15 | 16 | 17 |  |  |
 
+if a ball must rotate for specific position use svg annotation to rotate them using correct property.
+for example `ball 0` in all position is same, but `ball 14` must rotate base on postion of eye so there is config:
+```json
+"TopLeft": "",
+"TopRight": "translate(100, 0) scale(-1,1)",
+"BottomLeft": "translate(0,100) scale(1,-1)"
+```
+so when ball postion change, scale and translate affect shape
+
 ## Body (Pixel)
 body pixel can set from 0-21
 
@@ -49,3 +92,13 @@ body pixel can set from 0-21
 | 15 | 16 | 17 | 18 | 19 |
 | ![body20.png](/Asset/graphics/body20.png) | ![body21.png](/Asset/graphics/body21.png) |  |  |  |
 | 20 | 21 |  |  |  |
+
+there are algorithem for loading body pixel, each body pixel has 4 graphic. that indicate position of pixel based on neighbors.
+example of ids:
+* `5-0001`
+* `5-0011`
+* `5-0111`
+* `5-1111`
+
+it Anticlockwise around current pixel and allow different style of pixel based on neighbor pixel. it allow that end or start pixel make diffrent style.
+for pixel that never changes you can set them same. for example in body 21 all are same.
