@@ -1,4 +1,7 @@
 ﻿# Gufel Advanced QrCode Svg Render
+![NuGet Version](https://img.shields.io/nuget/vpre/Gufel.QrRender)
+
+
 Based on [`QRCoder`](https://github.com/Shane32/QRCoder) [`nuget`](https://www.nuget.org/packages/QRCoder) package, this package exports qrcode as high quality verctor svg format with customization and templates. You can also export svg as png or pdf with helper services and tools.
 
 you can build high quality svg qrcode with 20 predefined template.
@@ -21,7 +24,7 @@ you can build high quality svg qrcode with 20 predefined template.
 |:---:|:--:|
 | Vectorized | Rasterized |
 
-## ☕ Buy Me a Coffee (Crypto)
+## ☕ Buy Me a Coffee
 I spent many hours and produced a lot of code
 
 testing and testing and testing
